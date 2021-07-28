@@ -105,6 +105,14 @@ public class Pedido {
 		this.cliente = cliente;
 	}
 
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
+	}
+
 	@Override
 	public String toString() {
 		return "Pedido [idPedido=" + idPedido + ", codigoPedido=" + codigoPedido + ", dataPedido=" + dataPedido

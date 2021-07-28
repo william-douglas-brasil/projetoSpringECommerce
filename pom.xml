@@ -13,7 +13,7 @@
 	</parent>
 	<groupId>br.com.cotiinformatica</groupId>
 	<artifactId>projetoSpringECommerce</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>projetoSpringECommerce</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -111,7 +111,25 @@
 		<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-
+		
+		<!-- dependencia para autenticação com JWT-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
 
 	<!-- seção onde configuramos o deploy -->

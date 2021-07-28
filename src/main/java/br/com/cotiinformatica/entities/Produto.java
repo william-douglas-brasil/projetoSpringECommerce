@@ -12,7 +12,6 @@ import javax.persistence.ManyToMany;
 
 @Entity
 @Table
-
 public class Produto {
 
 	@Id
@@ -29,6 +28,9 @@ public class Produto {
 	@Column(length = 250, nullable = false)
 	private String descricao;
 
+	@Column(length = 250, nullable = false)
+	private String foto;
+
 	/*
 	 * Nome do atributo na classe Pedido onde foi mapeado a @JoinTable
 	 */
@@ -39,13 +41,14 @@ public class Produto {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Produto(Integer idProduto, String nome, Double preco, String descricao, List<Pedido> pedidos) {
+	public Produto(Integer idProduto, String nome, 
+   Double preco, String descricao, String foto) {
 		super();
 		this.idProduto = idProduto;
 		this.nome = nome;
 		this.preco = preco;
 		this.descricao = descricao;
-		this.pedidos = pedidos;
+		this.foto = foto;
 	}
 
 	public Integer getIdProduto() {
@@ -88,9 +91,18 @@ public class Produto {
 		this.pedidos = pedidos;
 	}
 
+	public String getFoto() {
+		return foto;
+	}
+
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
 	@Override
 	public String toString() {
 		return "Produto [idProduto=" + idProduto + ", nome=" + nome + ", preco=" + preco + ", descricao=" + descricao
-				+ "]";
+		+ ", foto=" + foto + "]";
 	}
 }
